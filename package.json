@@ -1,0 +1,12 @@
+{
+  "name": "ip-describe",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Musa Sutisna <mus4.sutisn4@gmail.com> (https://github.com/mu545)",
+  "license": "MIT"
+}
