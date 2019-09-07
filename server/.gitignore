@@ -1,0 +1,8 @@
+# denied node modules
+node_modules
+
+# denied environment
+.env
+
+# denied package lock
+package-lock.json
