@@ -22,13 +22,9 @@ function getInput(req, res, next) {
 function lookUpIp(req, res, next) {
   let options = {
     'method': 'GET',
-    'hostname': 'jkosgei-free-ip-geolocation-v1.p.rapidapi.com',
+    'hostname': 'api.ipdata.co',
     'port': null,
-    'path': `/${res.locals.input.ip}?api-key=test`,
-    'headers': {
-      'x-rapidapi-host': 'jkosgei-free-ip-geolocation-v1.p.rapidapi.com',
-      'x-rapidapi-key': process.env.RAPID_API_KEY
-    }
+    'path': `/${res.locals.input.ip}?api-key=${process.env.IPDATA_API_KEY}`
   }
   let fetchIp = https.request(options, function(getIp){
     let chunks = []
@@ -68,35 +64,8 @@ module.exports.get = [
   getInput,
   lookUpIp,
   function (req, res) {
-    let info = {
-      ip,
-      is_eu,
-      city,
-      region,
-      region_code,
-      country_name,
-      country_code,
-      continent_name,
-      continent_code,
-      latitude,
-      longitude,
-      asn,
-      organisation,
-      posta,
-      calling_code,
-      flag,
-      emoji_flag,
-      emoji_unicode,
-      carrier,
-      languages,
-      currency,
-      time_zone,
-      threat,
-      count
-    } = res.locals.info
-
     res.json({
-      info
+      info: res.locals.info
     })
   }
 ]
@@ -108,35 +77,8 @@ module.exports.post = [
   createInput,
   lookUpIp,
   function (req, res) {
-    let info = {
-      ip,
-      is_eu,
-      city,
-      region,
-      region_code,
-      country_name,
-      country_code,
-      continent_name,
-      continent_code,
-      latitude,
-      longitude,
-      asn,
-      organisation,
-      posta,
-      calling_code,
-      flag,
-      emoji_flag,
-      emoji_unicode,
-      carrier,
-      languages,
-      currency,
-      time_zone,
-      threat,
-      count
-    } = res.locals.info
-
     res.json({
-      info
+      info: res.locals.info
     })
   }
 ]

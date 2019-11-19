@@ -26,6 +26,6 @@
 - Run the `npm install` command to install server dependencies
 - Set environment configuration
   - Copy file `env.default` to `.env`
-  - Set `RAPID_API_KEY` with your rapid API key, you can get API key with register first on [Rapid API](https://rapidapi.com) then go to [ip-geo-location](https://rapidapi.com/natkapral/api/ip-geo-location) see your key on property `x-rapidapi-key` with a set code snippet for `Node.js Axios`
+  - Set `IPDATA_API_KEY` with your ipdata API key, you can get API key with register first on [ipdata](https://ipdata.co)
 - Run `npm start` to start your server
 - Now you can access your app ip describe
